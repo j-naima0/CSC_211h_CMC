@@ -1,58 +1,46 @@
-College Mental Health Companion
+# College Mental Health Companion
 
 A comprehensive mental health support application designed for college students, featuring mood tracking, counseling services, and task management.
 
 
-Features
+## Key Features
 
-Mood Tracking & Support
-
-Daily mood check-ins with personalized responses
-
-Mood-specific coping strategies and resources
-
-Video recommendations for mental wellness
-
-Journaling functionality with mood history
+## Mood Tracking & Support
+- Daily mood check-ins with personalized responses
+- Mood-specific coping strategies and resources
+- Video recommendations for mental wellness
+- Journaling functionality with mood history
 
 
-Counseling Services
 
-Personal/Academic counseling appointment requests
+## Counseling Services
 
-Flexible scheduling system
-
-Multiple counseling types (Personal, Academic, Career)
-
-Simple appointment status tracking
+- Personal/Academic counseling appointment requests
+- Flexible scheduling system
+- Multiple counseling types (Personal, Academic, Career)
+- Simple appointment status tracking
 
 
-Task Management
+## Task Management
 
-Task creation with deadlines
+- Task creation with deadlines
+- Task status tracking (Upcoming/Completed)
+- Clean, intuitive interface
 
-Task status tracking (Upcoming/Completed)
+## Technologies
 
-Clean, intuitive interface
+- C++ with Qt framework
+- Object-oriented design with inheritance
+- Smart pointer usage for memory management
 
-Technologies
 
-C++
+## Installation
 
-Qt Framework
+- Clone the repository
+- Install Qt Creator and required dependencies
+- Open the project in Qt Creator
+- Build and run the application
 
-QCmake
+## Contributing
 
-Installation
-
-Clone the repository
-
-Install Qt Creator and required dependencies
-
-Open the project in Qt Creator
-
-Build and run the application
-
-Contributing
-
-Contributions welcome! Please feel free to submit pull requests.
+- Contributions welcome! Please feel free to submit pull requests.
