@@ -1,0 +1,9 @@
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/College_Mental_Health_.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/install.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/College_Mental_Health__autogen_timestamp_deps.dir
+/Users/jannatulnaima/Documents/College_Mental_Health_/build/Qt_6_6_3_for_macOS-Debug/CMakeFiles/College_Mental_Health__autogen.dir
