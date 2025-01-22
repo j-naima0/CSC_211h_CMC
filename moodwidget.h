@@ -5,19 +5,6 @@
 #include <QPushButton>
 #include "moodinfodialog.h"
 
-/*class MoodWidget : public QWidget {
-    Q_OBJECT
-public:
-    explicit MoodWidget(QWidget *parent = nullptr);
-
-private slots:
-    void moodSelected();
-
-private:
-    void setupUi();
-    QList<QPushButton*> moodButtons;
-};
-*/
 class MoodWidget : public QWidget {
     Q_OBJECT
 public:

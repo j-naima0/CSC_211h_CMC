@@ -56,14 +56,14 @@ void LoginPage::setupLoginForm()
     loginUsernameEdit = new QLineEdit;
     loginUsernameEdit->setStyleSheet(
         "QLineEdit {"
-        "    padding: 12px;"  // Increased padding
+        "    padding: 12px;"
         "    border: none;"
         "    border-bottom: 1px solid #cccccc;"
         "    background-color: white;"
         "    color: #333333;"
-        "    font-family: 'Akaya Kanadaka';"  // Same font as headers
-        "    font-size: 20px;"  // Increased font size
-        "    min-height: 30px;"  // Prevent text cutoff
+        "    font-family: 'Akaya Kanadaka';"
+        "    font-size: 20px;"
+        "    min-height: 30px;"
         "}"
         );
     QLabel *passwordLabel = new QLabel("Password");
@@ -148,14 +148,14 @@ void LoginPage::setupRegisterForm()
     registerUsernameEdit = new QLineEdit;
     registerUsernameEdit->setStyleSheet(
         "QLineEdit {"
-        "    padding: 12px;"  // Increased padding
+        "    padding: 12px;"
         "    border: none;"
         "    border-bottom: 1px solid #cccccc;"
         "    background-color: white;"
         "    color: #333333;"
-        "    font-family: 'Akaya Kanadaka';"  // Same font as headers
-        "    font-size: 20px;"  // Increased font size
-        "    min-height: 30px;"  // Prevent text cutoff
+        "    font-family: 'Akaya Kanadaka';"
+        "    font-size: 20px;"
+        "    min-height: 30px;"
         "}"
         );
     QLabel *passwordLabel = new QLabel("Password");
@@ -253,43 +253,57 @@ void LoginPage::showRegisterForm()
 
 void LoginPage::handleLogin()
 {
-    QString username = loginUsernameEdit->text();
-    QString password = loginPasswordEdit->text();
+    try {
+        QString username = loginUsernameEdit->text();
+        QString password = loginPasswordEdit->text();
 
-    if (username.isEmpty() || password.isEmpty()) {
-        loginStatusLabel->setText("Please fill in all fields");
-        return;
-    }
+        if (username.isEmpty() || password.isEmpty()) {
+            throw EmptyFieldException();
+        }
 
-    if (userCredentials.contains(username) && userCredentials[username] == password) {
+        if (!userCredentials.contains(username) || userCredentials[username] != password) {
+            throw InvalidCredentialsException();
+        }
+
         emit loginSuccessful(username);
-    } else {
-        loginStatusLabel->setText("Invalid username or password");
+    }
+    catch (const LoginException& e) {
+        loginStatusLabel->setText(QString::fromStdString(e.what()));
+    }
+    catch (const std::exception& e) {
+        loginStatusLabel->setText("An unexpected error occurred");
+        qDebug() << "Login error:" << e.what();
     }
 }
 
 void LoginPage::handleRegister()
 {
-    QString username = registerUsernameEdit->text();
-    QString password = registerPasswordEdit->text();
-    QString confirmPassword = registerConfirmPasswordEdit->text();
+    try {
+        QString username = registerUsernameEdit->text();
+        QString password = registerPasswordEdit->text();
+        QString confirmPassword = registerConfirmPasswordEdit->text();
 
-    if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-        registerStatusLabel->setText("Please fill in all fields");
-        return;
+        if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            throw EmptyFieldException();
+        }
+
+        if (password != confirmPassword) {
+            throw PasswordMismatchException();
+        }
+
+        if (userCredentials.contains(username)) {
+            throw UserExistsException();
+        }
+
+        userCredentials[username] = password;
+        QMessageBox::information(this, "Success", "Registration successful! Please login.");
+        showLoginForm();
     }
-
-    if (password != confirmPassword) {
-        registerStatusLabel->setText("Passwords don't match");
-        return;
+    catch (const LoginException& e) {
+        registerStatusLabel->setText(QString::fromStdString(e.what()));
     }
-
-    if (userCredentials.contains(username)) {
-        registerStatusLabel->setText("Username already exists");
-        return;
+    catch (const std::exception& e) {
+        registerStatusLabel->setText("An unexpected error occurred");
+        qDebug() << "Registration error:" << e.what();
     }
-
-    userCredentials[username] = password;
-    QMessageBox::information(this, "Success", "Registration successful! Please login.");
-    showLoginForm();
 }

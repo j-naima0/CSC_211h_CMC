@@ -34,23 +34,4 @@ private:
     QPushButton *submitButton;
 };
 
-/*class AppointmentDialog : public QDialog {
-    Q_OBJECT
-public:
-    explicit AppointmentDialog(QWidget *parent = nullptr);
-
-private slots:
-    void submitAppointment();
-
-private:
-    void setupUi();
-
-    QLineEdit *nameEdit;
-    QLineEdit *idEdit;
-    QLineEdit *emailEdit;
-    QDateTimeEdit *dateTimeEdit;
-    QTextEdit *notesEdit;
-    QPushButton *submitButton;
-};
-*/
 #endif // COUNSELINGDIALOG_H

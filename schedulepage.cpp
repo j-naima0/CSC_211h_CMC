@@ -188,7 +188,7 @@ void SchedulePage::addUpcomingAppointment(const QString &details)
         "QListWidget::item {"
         "    background-color: black;"
         "    border-radius: 4px;"
-        "    margin: 5px 10px;"  // Add some margin between items
+        "    margin: 5px 10px;"
         "    min-height: 40px;"
         "}"
         "QListWidget::item:hover {"

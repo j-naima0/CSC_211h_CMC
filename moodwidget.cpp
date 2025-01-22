@@ -1,5 +1,3 @@
-// moodwidget.cpp
-// moodwidget.cpp
 #include "moodwidget.h"
 #include <QHBoxLayout>
 #include <QVBoxLayout>

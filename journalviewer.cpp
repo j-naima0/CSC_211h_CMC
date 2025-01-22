@@ -7,66 +7,6 @@ JournalViewer::JournalViewer(QWidget *parent) : QDialog(parent)
     setupUi();
 }
 
-/*void JournalViewer::setupUi()
-{
-    setWindowTitle("Your Journal Entries");
-    setMinimumSize(500, 400);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-
-    // Title
-    QLabel *titleLabel = new QLabel("Your Journal History");
-    titleLabel->setStyleSheet(
-        "font-family: 'Akaya Kanadaka';"
-        "font-size: 24px;"
-        "color: #333333;"
-        "    background-color: transparent;"
-
-        );
-    titleLabel->setAlignment(Qt::AlignCenter);
-
-    // Journal List
-    journalList = new QListWidget;
-    journalList->setStyleSheet(
-        "QListWidget {"
-        "    background-color: #eae1cc;"
-        "    border-radius: 8px;"
-        "    padding: 5px;"
-        "}"
-        "QListWidget::item {"
-        "    color: black;"
-        "    padding: 10px;"
-        "    border-bottom: 1px solid #555;"
-        "    background-color: #eae1cc;"
-        "}"
-        "QListWidget::item:hover {"
-        "    background-color: #eae1cc;"
-        "}"
-        );
-
-    // Clear Button
-    clearButton = new QPushButton("Clear All Entries");
-    clearButton->setStyleSheet(
-        "QPushButton {"
-        "    background-color: #f44336;"
-        "    color: white;"
-        "    border: none;"
-        "    border-radius: 4px;"
-        "    padding: 8px 16px;"
-        "}"
-        "QPushButton:hover {"
-        "    background-color: #d32f2f;"
-        "}"
-        );
-
-    mainLayout->addWidget(titleLabel);
-    mainLayout->addWidget(journalList);
-    mainLayout->addWidget(clearButton);
-
-    connect(clearButton, &QPushButton::clicked, this, &JournalViewer::clearJournals);
-    connect(journalList, &QListWidget::itemDoubleClicked, this, &JournalViewer::viewJournalDetail);
-}
-*/
 void JournalViewer::setupUi()
 {
     setWindowTitle("Your Journal Entries");

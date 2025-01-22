@@ -1,26 +1,3 @@
-/*#ifndef HOMEPAGE_H
-#define HOMEPAGE_H
-
-#include <QWidget>
-#include "moodwidget.h"
-#include "moodinfodialog.h"
-#include "journalviewer.h"
-
-class HomePage : public QWidget {
-    Q_OBJECT
-public:
-    explicit HomePage(QWidget *parent = nullptr);
-
-private:
-    JournalViewer *journalViewer;
-    QPushButton *viewJournalsBtn;
-
-    void setupUi();
-    MoodWidget *moodWidget;
-};
-
-#endif
-*/
 #ifndef HOMEPAGE_H
 #define HOMEPAGE_H
 

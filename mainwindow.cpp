@@ -10,58 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     createConnections();
 }
 
-/*void MainWindow::setupUi()
-{
-    loginPage = new LoginPage(this);
-    stackedWidget->insertWidget(0, loginPage);  // Add at index 0
-    stackedWidget->setCurrentWidget(loginPage); // Show login first
 
-    // Create central widget and main layout
-    QWidget *centralWidget = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout(centralWidget);
-    mainLayout->setSpacing(0);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
-
-    // Create navigation bar
-    QWidget *navBar = new QWidget;
-    navBar->setStyleSheet("background-color: white; border-bottom: 1px solid #E3E3E3;");
-    QHBoxLayout *navLayout = new QHBoxLayout(navBar);
-    navLayout->setSpacing(0);
-    navLayout->setContentsMargins(0, 0, 0, 0);
-
-    // Create navigation buttons
-    homeButton = new CustomButton("HOME");
-    scheduleButton = new CustomButton("SCHEDULE");
-    taskButton = new CustomButton("TASK");
-
-    navLayout->addWidget(homeButton);
-    navLayout->addWidget(scheduleButton);
-    navLayout->addWidget(taskButton);
-
-    // Create stacked widget and pages
-    stackedWidget = new QStackedWidget;
-    homePage = new HomePage;
-    schedulePage = new SchedulePage;
-    taskPage = new TaskPage;
-
-    stackedWidget->addWidget(homePage);
-    stackedWidget->addWidget(schedulePage);
-    stackedWidget->addWidget(taskPage);
-
-    // Add widgets to main layout
-    mainLayout->addWidget(navBar);
-    mainLayout->addWidget(stackedWidget);
-
-    setCentralWidget(centralWidget);
-    setMinimumSize(800, 600);
-
-    // Set initial state
-    stackedWidget->setCurrentWidget(loginPage);
-    homeButton->hide();
-    scheduleButton->hide();
-    taskButton->hide();
-}
-*/
 void MainWindow::setupUi()
 {
 

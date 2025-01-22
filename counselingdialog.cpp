@@ -64,14 +64,14 @@ void CounselingDialog::setupUi()
             "    border: 1px solid #ddd;"
             "    border-radius: 5px;"
             "    padding: 8px;"
-            "    color: black;"  // Make text visible
+            "    color: black;"
             "    font-size: 14px;"
             "}"
             "QCalendarWidget {"
             "    background-color: white;"
             "}"
             "QCalendarWidget QToolButton {"
-            "    color: black;"  // Make navigation arrows visible
+            "    color: black;"
             "    background-color: white;"
             "    border: none;"
             "    border-radius: 4px;"
@@ -79,12 +79,12 @@ void CounselingDialog::setupUi()
             "}"
             "QCalendarWidget QMenu {"
             "    background-color: white;"
-            "    color: black;"  // Make month selection text visible
+            "    color: black;"
             "    border: 1px solid #ddd;"
             "}"
             "QCalendarWidget QSpinBox {"
             "    background-color: white;"
-            "    color: black;"  // Make year selection text visible
+            "    color: black;"
             "    border: 1px solid #ddd;"
             "}"
             "QCalendarWidget QTableView {"
@@ -93,10 +93,10 @@ void CounselingDialog::setupUi()
             "    selection-color: white;"
             "}"
             "QCalendarWidget QTableView:enabled {"
-            "    color: black;"  // Make dates visible
+            "    color: black;"
             "}"
             "QCalendarWidget QTableView:disabled {"
-            "    color: #999999;"  // Make disabled dates visible but grayed out
+            "    color: #999999;"
             "}";
 
         dateTimeEdit = new QDateTimeEdit(QDateTime::currentDateTime());
